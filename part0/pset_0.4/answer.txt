@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->>browser: HTML document ( Actually a redirect to "/")
+    deactivate server
+
+    Note: Ommited frames are due to mitigation of redundancy as they may have been already given in prior 
+    answers or notes.
